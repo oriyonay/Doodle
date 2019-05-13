@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doodle.doodlefxmlController">
+   <children>
+      <VBox layoutX="1.0" layoutY="-6.0" prefHeight="26.0" prefWidth="1280.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="1280.0" spacing="10.0">
+               <children>
+                  <Button fx:id="brushbutton" mnemonicParsing="false" onAction="#toolselected" text="Brush" underline="true">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="eraserbutton" mnemonicParsing="false" onAction="#eraserselected" text="Eraser">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ColorPicker fx:id="colorpicker">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></ColorPicker>
+                  <TextField fx:id="bsize" text="30">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin></TextField>
+                  <Button mnemonicParsing="false" onAction="#clearcanvas" text="Clear">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="setdimensions" mnemonicParsing="false" onAction="#setdimensions" text="Set Dimensions">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#savefile" text="Save As">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openaboutdialog" text="About">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Canvas fx:id="canvas" height="690.0" layoutX="1.0" layoutY="26.0" width="1277.0" />
+   </children>
+</Pane>
